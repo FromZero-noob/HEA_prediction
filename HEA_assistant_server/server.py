@@ -1,12 +1,11 @@
 from mcp.server.fastmcp import FastMCP
-from .dependencies.HEA_extractor import chat_chain_get_msg
-from .dependencies.HEA_calculator import HEA_calculate
+from dependencies.HEA_extractor import chat_chain_get_msg
+from dependencies.HEA_calculator import HEA_calculate
 import os
 import argparse
 from typing import List    # Uncomment if needed
 import arxiv
 import json
-import pathlib
 import requests
 import re
 import joblib
@@ -222,3 +221,4 @@ def HEA_predictor(name:List[str])->List[str]:
 
 if __name__ == "__main__":
     mcp.run(transport="sse",host = "0.0.0.0",port=50002)
+
